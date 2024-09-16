@@ -1,3 +1,4 @@
+// Мячин Валентин БАС2
 #include <locale>
 #include <iostream>
 #include <cmath>

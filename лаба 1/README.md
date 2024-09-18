@@ -4,9 +4,8 @@
 
 Tests for task2_var4
 
-https://i.imgur.com/2B9QvEx.png (Test1)
+![image](https://github.com/user-attachments/assets/b66db600-f168-408b-beb2-45007a5883be)
 
-https://i.imgur.com/14xkLmi.png (Test2)
+![image](https://github.com/user-attachments/assets/808c46f5-cb1e-4ab1-b806-ebd51b3b6101)
 
-https://i.imgur.com/TAu7IJw.png (Test3)
-
+![image](https://github.com/user-attachments/assets/4998b94a-7b47-4137-903f-ba54df8c482e)

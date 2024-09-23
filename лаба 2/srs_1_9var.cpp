@@ -23,12 +23,12 @@ int main() {
      * x > 0 y > 0           ->        y <= 1-x
      * x > 0 y < 0 или x < 0 y > 0 ->  x^2 + y^2 <= 1
      * x < 0 y < 0           ->        y>= - 1 - x
-     * x = 0 или y = 0       ->        x + y <= 1
+     * x = 0 или y = 0       ->        |x + y| <= 1
      */
     if (x > 0 && y > 0) { result = (y <= 1 - x); }
     else if ((x > 0 && y < 0) || (x < 0 && y > 0)) { result = (x * x + y * y <= 1); }
     else if (x < 0 && y < 0) { result = (y >= -1 - x); }
-    else if ((x == 0 || y == 0) && x + y <= 1) { result = true; }
+    else if ((x == 0 || y == 0)) { result = (abs(x + y) <= 1); }
 
     cout << "Значение логической переменной: " << result << '\n';
     if (result) {

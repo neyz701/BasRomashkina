@@ -8,16 +8,17 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "rus");
 
-    double sum = 0;
-    int n, sign = -1;
+    double sum = 0, elem;
+    int n;
 
     cout << "Введите количество элементов n:\nn = ";
     cin >> n;
 
-    for(int i = 1; i <= n; ++i) {
+    elem = -0.25;
 
-        sum += (double)sign / (i * i * (i + 3));
-        sign *= -1;
+    for (int i = 2; i <= n + 1; ++i) {
+        sum += elem;
+        elem *= -((double)((i - 1)*(i - 1)*(i + 2))/(i * i * (i + 3)));
     }
 
     cout << fixed;

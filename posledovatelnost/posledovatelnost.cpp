@@ -6,31 +6,28 @@
 using namespace std;
 
 int main() {
-	setlocale(LC_ALL, "rus");
+    setlocale(LC_ALL, "rus");
 
-	int n;
-	double x, elem, sum;
+    int n;
+    double x, elem, sum;
 
-	cout << "Введите количество членов ряда n:\nn = ";
-	cin >> n;
-	cout << "Введите Х, такое, что |X| < 1\nX = ";
-	cin >> x;
+    cout << "Введите количество членов ряда n:\nn = ";
+    cin >> n;
+    cout << "Введите Х, такое, что |X| < 1\nX = ";
+    cin >> x;
 
-	elem = x;
-	sum = x;
+    elem = x;
+    sum = x;
 
-	/*
-	 * В elem считаем только степень х
-	 * Прибавляем elem / 2i + 1 к итоговой сумме
-	 */
-	for (int i = 1; i < n; ++i) {
-		elem *= -(x * x);
-		sum += elem / (2 * i + 1);
-	}
 
-	cout << "\nСумма " << n << " первых членов ряда = " << sum << endl;
+    for (int i = 2; i <= n; ++i) {
+        elem *= -(x * x * (2 * i - 3)) / (2 * i - 1);
+        sum += elem;
+    }
 
-	return 0;
+    cout << "\nСумма " << n << " первых членов ряда = " << sum << endl;
+
+    return 0;
 }
 /* ---------------------------------------I
  * Test 1:
